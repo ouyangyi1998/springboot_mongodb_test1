@@ -1,5 +1,4 @@
 # springboot+mongodb+分页模糊查询
-## 导入Page<User> findByUserNameLike(String username,Pageable pageable)对于模糊查询进行控制
 ## 在springboot2.0中MongoRepostiory(jpa)中
    - 不能使用findOne()进行搜索
    - 可以用findById().orElse()或者findById().get()
@@ -10,7 +9,8 @@
    - @PostMapping(consumes=MediaType.XXX)对于注入数据进行控制
    - @RequestBody() 输入为json数据
 - ExampleMatcher matcher=ExampleMatcher.matching().withIgnorePaths() 新建匹配器
-   
+## 对于匹配器操作  
+***
 改变Null值处理方式
 - public ExampleMatcher withNullHandler(NullHandler nullHandler)
 - public ExampleMatcher withIncludeNullValues()
@@ -34,7 +34,7 @@
 - 改变配置项defaultIgnoreCase，分别设为：
 - true
 - 指定值。
-
+***
 向“忽略属性列表”中添加属性
 - public ExampleMatcher withIgnorePaths(String... ignoredPaths)
 - 产生效果：
