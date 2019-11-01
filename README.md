@@ -34,16 +34,17 @@
 - 改变配置项defaultIgnoreCase，分别设为：
 - true
 - 指定值。
-***
 向“忽略属性列表”中添加属性
 - public ExampleMatcher withIgnorePaths(String... ignoredPaths)
 - 产生效果：
 - 改变配置项ignoredPaths：
 - 向列表中添加一个或多个属性。
 ***
+
 Example<User> example=Example.of(user,matcher) 创建实例,把过滤器matcher放入其中
 - UserRepository.findOne(example).get()查询结果
 ***
+- 导入Page<User> findByUserNameLike(String username,Pageable pageable)对于模糊查询进行控制
 - 对于模糊分页查询,在url中输入pagenumber，pagesize，keywords进行查询
    - 设置最小页数和最小页面显示内容 
    - PageRequest pageres=PageRequest.of(pagenumber-1,pagesize)实现分页
