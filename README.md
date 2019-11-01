@@ -16,8 +16,11 @@
 - public ExampleMatcher withNullHandler(NullHandler nullHandler)
 - public ExampleMatcher withIncludeNullValues()
 - public ExampleMatcher withIgnoreNullValues()
-产生效果：
-改变配置项nullHandler，分别设为：指定值、INCLUDE（包括）、IGNORE（忽略）。
+- 产生效果：
+改变配置项nullHandler，分别设为：
+- 指定值
+- INCLUDE（包括）
+- IGNORE（忽略）。
 
 改变默认字符串匹配方式
 - public ExampleMatcher withStringMatcher(StringMatcher defaultStringMatcher)
