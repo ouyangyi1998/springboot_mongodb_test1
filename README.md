@@ -9,8 +9,9 @@
    - @ResponseStatus()对于异常进行捕捉，reason返回自定义异常信息
    - @PostMapping(consumes=MediaType.XXX)对于注入数据进行控制
    - @RequestBody() 输入为json数据
-- ExampleMatcher matcher=ExampleMatcher.matching().withIgnorePaths() 新建匹配器
+
 ## 对于匹配器操作  
+- ExampleMatcher matcher=ExampleMatcher.matching().withIgnorePaths() 新建匹配器
 改变Null值处理方式
 - public ExampleMatcher withNullHandler(NullHandler nullHandler)
 - public ExampleMatcher withIncludeNullValues()
