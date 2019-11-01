@@ -24,7 +24,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(value = HttpStatus.CREATED,reason = "用户创建")
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public User createUser(@RequestBody User user) {
         return userRepository.save(user);
@@ -89,7 +89,7 @@ public class UserController {
         return userRepository.findByUserNameLike(keyWords,pageRequest);
     }
 
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(value = HttpStatus.OK,reason = "删除成功")
     @DeleteMapping(value = "/{id}")
     public void removeUser(@PathVariable("id")String id)
     {
