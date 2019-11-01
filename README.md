@@ -1,11 +1,11 @@
-# springboot+mongodb+分页查询
-- 导入Page<User> findByUserNameLike(String username,Pageable pageable)对于模糊查询进行控制
-- 在springboot2.0中MongoRepostiory(jpa)的方法改变了
+# springboot+mongodb+分页模糊查询
+## 导入Page<User> findByUserNameLike(String username,Pageable pageable)对于模糊查询进行控制
+## 在springboot2.0中MongoRepostiory(jpa)中
    - 不能使用findOne()进行搜索
    - 可以用findById().orElse()或者findById().get()
    - UserRepository.findById(id).orElse(null)查询为空,返回NULL
    - 用repository.findById(id).get()查询为空会报错
-- 注解开发(SpringMVC)
+## 注解开发(SpringMVC)
    - @ResponseStatus()对于异常进行捕捉，reason返回自定义异常信息
    - @PostMapping(consumes=MediaType.XXX)对于注入数据进行控制
    - @RequestBody() 输入为json数据
