@@ -43,7 +43,7 @@
 - 向列表中添加一个或多个属性。
 
 
-- Example<User> example=Example.of(user,matcher) 创建实例,把过滤器matcher放入其中
+Example<User> example=Example.of(user,matcher) 创建实例,把过滤器matcher放入其中
 - UserRepository.findOne(example).get()查询结果
 
 
