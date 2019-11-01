@@ -1,5 +1,4 @@
-# springboot_mongodb_test1
-## springboot+mongodb+分页查询
+# springboot+mongodb+分页查询
 - 导入Page<User> findByUserNameLike(String username,Pageable pageable)对于模糊查询进行控制
 - 在springboot2.0中MongoRepostiory(jpa)的方法改变了
    - 不能使用findOne()进行搜索
