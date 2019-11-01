@@ -9,9 +9,8 @@
    - @ResponseStatus()对于异常进行捕捉，reason返回自定义异常信息
    - @PostMapping(consumes=MediaType.XXX)对于注入数据进行控制
    - @RequestBody() 输入为json数据
-
 ### 对于匹配器操作  
-- ExampleMatcher matcher=ExampleMatcher.matching().withIgnorePaths() 新建匹配器
+- ExampleMatcher matcher=ExampleMatcher.matching() 新建匹配器
 ***
 改变Null值处理方式
 - public ExampleMatcher withNullHandler(NullHandler nullHandler)
@@ -36,6 +35,7 @@
 - 改变配置项defaultIgnoreCase，分别设为：
 - true
 - 指定值。
+
 向“忽略属性列表”中添加属性
 - public ExampleMatcher withIgnorePaths(String... ignoredPaths)
 - 产生效果：
@@ -43,13 +43,10 @@
 - 向列表中添加一个或多个属性。
 ***
 ### 模糊分页查询
-Example<User> example=Example.of(user,matcher) 创建实例,把过滤器matcher放入其中
-- UserRepository.findOne(example).get()查询结果
-***
 - 导入Page<User> findByUserNameLike(String username,Pageable pageable)对于模糊查询进行控制
 - 对于模糊分页查询,在url中输入pagenumber，pagesize，keywords进行查询
    - 设置最小页数和最小页面显示内容 
    - PageRequest pageres=PageRequest.of(pagenumber-1,pagesize)实现分页
-   - userRepository.findAll(example,pageres) 注入分页信息和过滤信息
+   - userRepository.findAll(example,pageres) 注入分页信息和匹配信息
    - userRepository.findByUserNameLike(keywords,pageres) 注入模糊信息和分页信息
 - 以上都在postman中测试通过。。。
