@@ -46,7 +46,7 @@ public class UserController {
         return userRepository.findOne(example).get();
     }
 
-    @GetMapping(value = "/page/{pageNumber}/pagesize/{pageSize}/name/{name}")
+    @GetMapping(value = "/page/{pageNumber}/pageSize/{pageSize}/name/{name}")
     public Page<User> readUsersByPage(@PathVariable("pageNumber")int pageNumber,@PathVariable("pageSize")int pageSize,@PathVariable("name")String name)
     {
         User user=new User();
@@ -71,7 +71,7 @@ public class UserController {
        return userRepository.findAll(sort);
 
     }
-    @GetMapping(value = "/page/{pageNumber}/pagesize/{pageSize}/keyword/{keyWords}")
+    @GetMapping(value = "/page/{pageNumber}/pageSize/{pageSize}/keyword/{keyWords}")
     public Page<User> readUsersByKeywords(@PathVariable("pageNumber")int pageNumber,@PathVariable("pageSize")int pageSize,@PathVariable("keyWords")String keyWords)
     {
         if(keyWords==null)
