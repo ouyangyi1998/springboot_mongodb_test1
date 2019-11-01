@@ -16,7 +16,7 @@
 - public ExampleMatcher withNullHandler(NullHandler nullHandler)
 - public ExampleMatcher withIncludeNullValues()
 - public ExampleMatcher withIgnoreNullValues()
-- 产生效果：
+产生效果：
 改变配置项nullHandler，分别设为：
 - 指定值
 - INCLUDE（包括）
@@ -25,15 +25,19 @@
 改变默认字符串匹配方式
 - public ExampleMatcher withStringMatcher(StringMatcher defaultStringMatcher)
 产生效果：
-改变配置项defaultStringMatcher，设为指定值。
+改变配置项defaultStringMatcher，设为
+- 指定值。
 
 改变默认大小写忽略方式。
 - public ExampleMatcher withIgnoreCase()
 - public ExampleMatcher withIgnoreCase(boolean defaultIgnoreCase)
 产生效果：
-改变配置项defaultIgnoreCase，分别设为：true，指定值。
+改变配置项defaultIgnoreCase，分别设为：
+- true
+- 指定值。
 
 向“忽略属性列表”中添加属性。
 - public ExampleMatcher withIgnorePaths(String... ignoredPaths)
 产生效果：
-改变配置项ignoredPaths，向列表中添加一个或多个属性。
+改变配置项ignoredPaths，
+- 向列表中添加一个或多个属性。
