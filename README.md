@@ -25,10 +25,10 @@
 改变默认字符串匹配方式
 - public ExampleMatcher withStringMatcher(StringMatcher defaultStringMatcher)
 - 产生效果：
-- 改变配置项defaultStringMatcher，设为
+- 改变配置项defaultStringMatcher，设为：
 - 指定值。
 
-改变默认大小写忽略方式。
+改变默认大小写忽略方式
 - public ExampleMatcher withIgnoreCase()
 - public ExampleMatcher withIgnoreCase(boolean defaultIgnoreCase)
 - 产生效果：
@@ -36,8 +36,20 @@
 - true
 - 指定值。
 
-向“忽略属性列表”中添加属性。
+向“忽略属性列表”中添加属性
 - public ExampleMatcher withIgnorePaths(String... ignoredPaths)
 - 产生效果：
-- 改变配置项ignoredPaths，
+- 改变配置项ignoredPaths：
 - 向列表中添加一个或多个属性。
+
+
+- Example<User> example=Example.of(user,matcher) 创建实例,把过滤器matcher放入其中
+- UserRepository.findOne(example).get()查询结果
+
+
+- 对于模糊分页查询,在url中输入pagenumber，pagesize，keywords进行查询
+   - 设置最小页数和最小页面显示内容 
+   - PageRequest pageres=PageRequest.of(pagenumber-1,pagesize)实现分页
+   - userRepository.findAll(example,pageres) 注入分页信息和过滤信息
+   - userRepository.findByUserNameLike(keywords,pageres) 注入模糊信息和分页信息
+- 以上都在postman中测试通过。。。
